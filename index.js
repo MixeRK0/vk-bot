@@ -239,6 +239,11 @@ bot.command('Заявка', (ctx) => {
 });
 
 bot.startPolling();
+
+app.get('/ping', function (req, res) {
+    res.send('OK')
+})
+
 app.listen(process.env.PORT);
 
 async function getUserName(ctx) {
