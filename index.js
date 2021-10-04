@@ -32,7 +32,15 @@ const menuButtons = Markup
         ],
     ]);
 
-bot.command('qwe', (ctx) => {
+bot.command('Начать', (ctx) => {
+    ctx.reply(strData.defaultAnswer, null, menuButtons);
+});
+
+bot.command('start', (ctx) => {
+    ctx.reply(strData.defaultAnswer, null, menuButtons);
+});
+
+bot.command('/start', (ctx) => {
     ctx.reply(strData.defaultAnswer, null, menuButtons);
 });
 
