@@ -8,6 +8,7 @@ if (!globalThis.fetch) {
 }
 
 const token = '983f0a47fb46b4f66f02b0c2d8496de90f591921a2e9b1e77c05d36e8f5d1dbf82361d21ac835ee9219b4';
+
 const app = express();
 const bot = new VkBot(token);
 
