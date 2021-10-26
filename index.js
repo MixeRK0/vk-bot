@@ -1,13 +1,16 @@
+require('dotenv').config();
+
 const express = require('express');
 const VkBot = require('node-vk-bot-api');
 const Markup = require('node-vk-bot-api/lib/markup');
 const fetch = require('cross-fetch');
 const strData = require("./string");
+
 if (!globalThis.fetch) {
     globalThis.fetch = fetch;
 }
 
-const token = '983f0a47fb46b4f66f02b0c2d8496de90f591921a2e9b1e77c05d36e8f5d1dbf82361d21ac835ee9219b4';
+const token = process.env.TOKEN;
 
 const app = express();
 const bot = new VkBot(token);
